@@ -1,0 +1,14 @@
+<?php
+
+return PhpCsFixer\Config::create()
+    ->setRules(array(
+        '@PSR2' => true,
+        '@Symfony' => true,
+        'array_syntax' => array('syntax' => 'long'),
+    ))
+    ->setFinder(
+        PhpCsFixer\Finder::create()
+            ->in(__DIR__.'/src/Windowing')
+            ->in(__DIR__.'/tests/Windowing')
+    )
+;
