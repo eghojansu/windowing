@@ -1,7 +1,9 @@
 <?php
 
 if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && 'XMLHttpRequest' === $_SERVER['HTTP_X_REQUESTED_WITH']) {
-    require __DIR__.'/vendor/autoload.php';
+    require __DIR__.'/src/Windowing/Result.php';
+    require __DIR__.'/src/Windowing/Source.php';
+    require __DIR__.'/src/Windowing/Windowing.php';
 
     $response = array(
         'success' => false,
