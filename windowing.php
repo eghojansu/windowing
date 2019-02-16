@@ -178,9 +178,7 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && 'XMLHttpRequest' === $_SERVER['H
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td colspan="2"><em>No data</em></td>
-                                    </tr>
+                                    <tr><td colspan="2"><em>No data</em></td></tr>
                                 </tbody>
                             </table>
                         </td>
@@ -228,6 +226,9 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && 'XMLHttpRequest' === $_SERVER['H
                         ngramWrapper.appendChild(row);
                     }
                 } else {
+                    document.getElementById('similarity').innerHTML = '&nbsp;';
+                    document.getElementById('coefficient').innerHTML = '&nbsp;';
+                    document.getElementById('ngram-result').querySelector('tbody').innerHTML = '<tr><td colspan="2"><em>No data</em></td></tr>';
                     alert('Response error: ' + response.message);
                 }
             }, function(xhr) {
